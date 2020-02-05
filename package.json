@@ -1,0 +1,17 @@
+{
+  "name": "hour-range-expression",
+  "version": "1.0.0",
+  "description": "Express hour range by day of the week in JavaScript. ",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donghoony1/Hour-Range-Expression.git"
+  },
+  "author": {"name": "Dong-Hoon Yoo", "email": "yoodonghoon01@gmail.com", "url": "https://blog.donghoonyoo.com"},
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/donghoony1/Hour-Range-Expression/issues"
+  },
+  "homepage": "https://github.com/donghoony1/Hour-Range-Expression#readme",
+  "keywords": ["Hour", "Hour Range", "Hour Range Expression"]
+}
