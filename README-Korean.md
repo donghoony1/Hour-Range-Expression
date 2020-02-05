@@ -4,25 +4,25 @@ JavaScript에서 요일별 시간 범위를 표현하는 Node.js 패키지
 [English|영어](https://github.com/donghoony1/Hour-Range-Expression/blob/master/README.md)
 
 ```
-const hre = require('hour-range-expression');
+const HRE = require('hour-range-expression');
 
 // 표현식
 const exp = 'sun(0-10) mon(0-8 22-24) tue(0-8 22-24) wed(0-8 22-24) thu(0-8 22-24) fri(0-8 22-24) sat(0-10)';
 
 // 일반 함수
-console.log(hre.match(exp, 1005058800, null));    // true
+console.log(HRE.match(exp, 1005058800, null));    // true
 
 // 콜백 함수
-hre.match(exp, 1005058800, null, (error, result) => {
+HRE.match(exp, 1005058800, null, (error, result) => {
     if(error) console.error(error);
     else if(result) console.log(result);    // true
 });
 
 // 확인하기
-console.log(hre.check(exp, null));   // true
+console.log(HRE.check(exp, null));   // true
 
 // 확인하기(callback)
-hre.check(exp, null, (error, result) => {
+HRE.check(exp, null, (error, result) => {
     if(error) console.error(error);
     else if(result) console.log(result);    // true
 });
@@ -42,20 +42,20 @@ $ npm install hour-range-expression
 - 일반 함수와 콜백 함수 모두를 지원합니다.
 
 # ✒ 매개변수
-## `hre.match`
+## `HRE.match`
 주어진 시간이 HRE에 의해 정의 된 시간 범위에 있는지 확인합니다.
 ```
-hre.match(HRE, Unixtime, CustomWeeks[, Callback]);
+HRE.match(HRE, Unixtime, CustomWeeks[, Callback]);
 ```
 - **(String) HRE:** 시간 범위 표현식
 - **(Integer) Unixtime:** 확인하기를 원하는 시간(Unixtime 기준).
 - **(Array) Custom Weeks:** 표현식에서 요일 이름을 변경하고 싶다면, 배열을 통해 요일 이름을 입력하세요. 그렇지 않다면 `null`을 넣으세요.
 - **\[(Callback) Callback\]:** 콜백으로 결과를 얻기를 원한다면, 콜백 함수를 넣으세요.
 
-## `hre.check`
+## `HRE.check`
 주어진 HRE가 유효한 HRE인지 확인합니다.
 ```
-hre.check(HRE, CustomWeeks[, Callback]);
+HRE.check(HRE, CustomWeeks[, Callback]);
 ```
 - **HRE:** 시간 범위 표현식
 - **Custom Weeks:** 표현식에서 요일 이름을 변경하고 싶다면, 배열을 통해 요일 이름을 입력하세요. 그렇지 않다면 `null`을 넣으세요.

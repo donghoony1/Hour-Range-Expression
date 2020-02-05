@@ -4,25 +4,25 @@ Express hour range by day of the week in JavaScript.
 [Korean|한국어](https://github.com/donghoony1/Hour-Range-Expression/blob/master/README-Korean.md)
 
 ```
-const hre = require('hour-range-expression');
+const HRE = require('hour-range-expression');
 
 // Expression
 const exp = 'sun(0-10) mon(0-8 22-24) tue(0-8 22-24) wed(0-8 22-24) thu(0-8 22-24) fri(0-8 22-24) sat(0-10)';
 
 // Without callback
-console.log(hre.match(exp, 1005058800, null));    // true
+console.log(HRE.match(exp, 1005058800, null));    // true
 
 // With callback
-hre.match(exp, 1005058800, null, (error, result) => {
+HRE.match(exp, 1005058800, null, (error, result) => {
     if(error) console.error(error);
     else if(result) console.log(result);    // true
 });
 
 // Checking 
-console.log(hre.check(exp, null));   // true
+console.log(HRE.check(exp, null));   // true
 
 // Checking(callback)
-hre.check(exp, null, (error, result) => {
+HRE.check(exp, null, (error, result) => {
     if(error) console.error(error);
     else if(result) console.log(result);    // true
 });
@@ -42,20 +42,20 @@ $ npm install hour-range-expression
 - We support functions both without callback and with callback.
 
 # ✒ Parameters
-## `hre.match`
+## `HRE.match`
 Checking whether the hour which was given is in hour range defined by HRE.
 ```
-hre.match(HRE, Unixtime, CustomWeeks[, Callback]);
+HRE.match(HRE, Unixtime, CustomWeeks[, Callback]);
 ```
 - **(String) HRE:** Hour Range Expression.
 - **(Integer) Unixtime:** Time to check for matches.
 - **(Array) Custom Weeks:** If you want to change names of day in expression, Enter the name of the day through the array. Otherwise, Just enter `null`.
 - **\[(Callback) Callback\]:** If you want to get result through callback, Enter callback function.
 
-## `hre.check`
+## `HRE.check`
 Checking whether HRE which was given is match correct HRE.
 ```
-hre.check(HRE, CustomWeeks[, Callback]);
+HRE.check(HRE, CustomWeeks[, Callback]);
 ```
 - **(String) HRE:** Hour Range Expression.
 - **(Array) Custom Weeks:** If you want to change names of day in expression, Enter the name of the day through the array. Otherwise, Just enter `null`.
