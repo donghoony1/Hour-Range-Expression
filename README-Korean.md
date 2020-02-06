@@ -51,7 +51,7 @@ HRE.match(HRE, Unixtime, CustomWeeks[, Callback]);
 - **(String) HRE:** 시간 범위 표현식
 - **(Integer) Unixtime:** 확인하기를 원하는 시간(Unixtime 기준).
 - **(Array) Custom Weeks:** 표현식에서 요일 이름을 변경하고 싶다면, 배열을 통해 요일 이름을 입력하세요. 그렇지 않다면 `null`을 넣으세요.
-- **\[(Callback) Callback\]:** 콜백으로 결과를 얻기를 원한다면, 콜백 함수를 넣으세요.
+- **[(Callback) Callback]:** 콜백으로 결과를 얻기를 원한다면, 콜백 함수를 넣으세요.
 
 ## `HRE.check`
 주어진 HRE가 유효한 HRE인지 확인합니다.
@@ -61,7 +61,7 @@ HRE.check(HRE, CustomWeeks[, Callback]);
 ### 매개변수
 - **HRE:** 시간 범위 표현식
 - **Custom Weeks:** 표현식에서 요일 이름을 변경하고 싶다면, 배열을 통해 요일 이름을 입력하세요. 그렇지 않다면 `null`을 넣으세요.
-- **\[Callback\]:** 콜백으로 결과를 얻기를 원한다면, 콜백 함수를 넣으세요.
+- **[Callback]:** 콜백으로 결과를 얻기를 원한다면, 콜백 함수를 넣으세요.
 
 ## 상세
 ### Custom Weeks

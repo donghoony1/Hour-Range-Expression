@@ -51,7 +51,7 @@ HRE.match(HRE, Unixtime, CustomWeeks[, Callback]);
 - **(String) HRE:** Hour Range Expression.
 - **(Integer) Unixtime:** Time to check for matches.
 - **(Array) Custom Weeks:** If you want to change names of day in expression, Enter the name of the day through the array. Otherwise, Just enter `null`.
-- **\[(Callback) Callback\]:** If you want to get result through callback, Enter callback function.
+- **[(Callback) Callback]:** If you want to get result through callback, Enter callback function.
 
 ## `HRE.check`
 Checking whether HRE which was given is match correct HRE.
@@ -61,7 +61,7 @@ HRE.check(HRE, CustomWeeks[, Callback]);
 ### Parameters
 - **(String) HRE:** Hour Range Expression.
 - **(Array) Custom Weeks:** If you want to change names of day in expression, Enter the name of the day through the array. Otherwise, Just enter `null`.
-- **\[(Callback) Callback\]:** If you want to get result through callback, Enter callback function.
+- **[(Callback) Callback]:** If you want to get result through callback, Enter callback function.
 
 ## Details
 ### Custom Weeks
