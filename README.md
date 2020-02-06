@@ -41,12 +41,13 @@ $ npm install hour-range-expression
 - `.check` Checking whether HRE which was given is match correct HRE.
 - We support functions both without callback and with callback.
 
-# ✒ Parameters
+# 🎲 Methods
 ## `HRE.match`
 Checking whether the hour which was given is in hour range defined by HRE.
 ```
 HRE.match(HRE, Unixtime, CustomWeeks[, Callback]);
 ```
+### Parameters
 - **(String) HRE:** Hour Range Expression.
 - **(Integer) Unixtime:** Time to check for matches.
 - **(Array) Custom Weeks:** If you want to change names of day in expression, Enter the name of the day through the array. Otherwise, Just enter `null`.
@@ -57,17 +58,18 @@ Checking whether HRE which was given is match correct HRE.
 ```
 HRE.check(HRE, CustomWeeks[, Callback]);
 ```
+### Parameters
 - **(String) HRE:** Hour Range Expression.
 - **(Array) Custom Weeks:** If you want to change names of day in expression, Enter the name of the day through the array. Otherwise, Just enter `null`.
 - **\[(Callback) Callback\]:** If you want to get result through callback, Enter callback function.
 
-### Details
-#### Custom Weeks
-##### Default
+## Details
+### Custom Weeks
+#### Default
 ```
 ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'everyday']
 ```
-##### Example
+#### Example
 ```
 ['일', '월', '화', '수', '목', '금', '토', '매일']
 ```
